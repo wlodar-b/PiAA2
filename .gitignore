@@ -1,0 +1,12 @@
+# Srodowisko wirtualne
+venv/
+env/
+
+# Pliki tymczasowe Pythona
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Konfiguracja IDE (np. VS Code, PyCharm)
+.vscode/
+.idea/
