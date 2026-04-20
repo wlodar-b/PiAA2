@@ -19,14 +19,13 @@ class GameWindow:
         pygame.display.set_caption(f"Kolko i Krzyzyk - {board.size}x{board.size} (Wygrywa: {board.win_condition})")
 
     def draw_grid(self):
-        # Rysuje tło i linie siatki
+        """Rysuje tło i linie siatki."""
         self.screen.fill(BG_COLOR)
         for i in range(1, self.board.size):
             # Linie pionowe
-            pygame.draw.line(self.screen, LINE_COLOR, (x * self.cell_size, 0), (x * self.cell_size, self.height), 5)
+            pygame.draw.line(self.screen, LINE_COLOR, (i * self.cell_size, 0), (i * self.cell_size, self.height), 5)
             # Linie poziome
-            pygame.draw.line(self.screen, LINE_COLOR, (0, y * self.cell_size), (self.width, x * self.cell_size), 5)
-
+            pygame.draw.line(self.screen, LINE_COLOR, (0, i * self.cell_size), (self.width, i * self.cell_size), 5)
     def draw_marks(self):
         # Iteruje przez planszę i rysuje X lub O w odpowiednich miejscach
         for row in range(self.board.size):

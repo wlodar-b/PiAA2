@@ -1,7 +1,7 @@
 import pygame
 import sys
 from gui.window import GameWindow
-from game.board import Board
+from core.board import Board
 
 def main():
     # Na razie ustawiamy parametry na sztywno
