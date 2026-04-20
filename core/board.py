@@ -45,7 +45,7 @@ class Board:
                 if current_mark != ' ':
                     # Sprawdzamy wszystkie kierunki
                     for dr, dc in directions:
-                        if self.check_sequence(r, c, dr, dc, current_mark):
+                        if self._check_sequence(r, c, dr, dc, current_mark):
                             return current_mark  # Zwraca symbol gracza, który wygrał
         return None  # Brak zwycięzcy
     
@@ -57,7 +57,7 @@ class Board:
             # Jeśli wyjdziemy poza plansze lub znak się nie zgadza, to sekwencja jest przerwana
             if r < 0 or r >= self.size or c < 0 or c >= self.size or self.grid[r][c] != player:
                 return False
-            return True
+        return True
         
     def print_board(self):
         # Testowa mtetoda do wyświetlania planszy w konsoli
